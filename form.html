@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Form</title>
+    <script>
+        // Function to display the input data
+        function displayInput() {
+            // Get user input values from the form
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var city = document.getElementById("city").value;
+            
+            // Display the input in the output section
+            document.getElementById("output").innerHTML = 
+                "Name: " + name + "<br>" + 
+                "Age: " + age + "<br>" + 
+                "City: " + city;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>User Input Form</h2>
+
+    <!-- User input form -->
+    <form onsubmit="event.preventDefault(); displayInput();">
+        <label for="name">Name: </label>
+        <input type="text" id="name" required><br><br>
+
+        <label for="age">Age: </label>
+        <input type="number" id="age" required><br><br>
+
+        <label for="city">City: </label>
+        <input type="text" id="city" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Output:</h3>
+    <div id="output"></div>
+
+</body>
+</html>
